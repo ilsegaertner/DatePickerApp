@@ -114,3 +114,10 @@ body {
 .mat-calendar-controls .mat-calendar-previous-button {
   display: none;
 }
+
+@media all and (max-width: 500px) {
+  body {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
