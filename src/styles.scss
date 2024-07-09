@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+// Define the theme object.
+$DatePickerApp3-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($DatePickerApp3-theme);
+}
+
+@font-face {
+  font-family: "Neuzeit Grotesk Regular";
+  src: url("/src/assets/font/NeuzeitGro-Reg.woff2") format("woff2"),
+    url("/src/assets/font/NeuzeitGro-Reg.woff") format("woff"),
+    url("/src/assets/font/NeuzeitGro-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neuzeit Grotesk Bold";
+  src: url("/src/assets/font/NeuzeitGro-Bol.woff2") format("woff2"),
+    url("/src/assets/font/NeuzeitGro-Bol.woff") format("woff"),
+    url("/src/assets/font/NeuzeitGro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neuzeit Grotesk Condensed Black";
+  src: url("/src/assets/font/NeuzeitGroCon-Bla.woff2") format("woff2"),
+    url("/src/assets/font/NeuzeitGroCon-Bla.woff") format("woff"),
+    url("/src/assets/font/NeuzeitGroCon-Bla.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Neuzeit Grotesk", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 66.6%;
+  background-color: #f2f2f2;
+}
+
+.mat-calendar-body-cell-container .restricted-date span {
+  border-color: red !important;
+}
+
+.mat-calendar-body-cell-container .mat-calendar-body-cell::after {
+  content: attr(aria-label);
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  color: #f2f2f2;
+  padding: 5px;
+  border-radius: 7px;
+  width: max-content;
+  top: -20px;
+  left: 50%;
+  height: max-content;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1000;
+  overflow: auto;
+  visibility: hidden;
+}
+
+.mat-calendar-body-cell-container .mat-calendar-body-cell:hover::after {
+  visibility: visible;
+}
+
+/* Hide the tooltip if aria-label is empty */
+.mat-calendar-body-cell-container
+  .mat-calendar-body-cell[aria-label=""]::after {
+  display: none;
+}
+
+/* Hide the tooltip if aria-label is not set */
+.mat-calendar-body-cell-container
+  .mat-calendar-body-cell:not([aria-label])::after {
+  display: none;
+}
+
+.mat-calendar-body-cell-content {
+  position: relative;
+}
+
+.mat-calendar-controls .mat-calendar-next-button,
+.mat-calendar-controls .mat-calendar-previous-button {
+  display: none;
+}

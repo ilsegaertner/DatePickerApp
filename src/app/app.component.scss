@@ -1,0 +1,51 @@
+h1 span {
+  color: #00d593;
+  font-family: "Neuzeit Grotesk Condensed Black", sans-serif;
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Neuzeit Grotesk Condensed Black", sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+.selected-date-div {
+  // background-color: #00d593;
+  background: linear-gradient(to right, #00d593, white);
+  flex: 1;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-date-div * {
+  font-family: "Neue Grotesk Bold", sans-serif;
+  font-weight: bold;
+}
+
+.main-div {
+  // margin-top: 20px;
+  margin: 20px auto;
+  // border: 0.2px solid black;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  height: max-content;
+  background-color: white;
+}
