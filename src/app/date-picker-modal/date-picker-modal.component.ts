@@ -2,8 +2,6 @@ import {
   AfterViewInit,
   Component,
   OnInit,
-  ElementRef,
-  Renderer2,
   ViewChild,
   ChangeDetectorRef,
   OnDestroy,
@@ -21,7 +19,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 export class DatePickerModalComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
-  selectedDate: Date | null = null;
+  selectedDate: Date | null = null; // The "= null" initializes selectedDate to null. That way it is defined
   @ViewChild('picker', { static: false }) datepicker!: MatDatepicker<any>;
   private observer: MutationObserver;
 
@@ -29,8 +27,6 @@ export class DatePickerModalComponent
     public dialogRef: MatDialogRef<DatePickerModalComponent>,
     private datePickerService: DatePickerService,
     private tooltipService: TooltipService,
-    private el: ElementRef,
-    private renderer: Renderer2,
     private cdr: ChangeDetectorRef
   ) {
     this.observer = new MutationObserver(() => {
@@ -69,6 +65,17 @@ export class DatePickerModalComponent
     }
   }
 
+  tooltipText = (d: Date): string => {
+    const { notice } = this.datePickerService.dateFilter(d);
+    return notice || '';
+  };
+
+  dateFilter = (d: Date | null): boolean => {
+    if (d === null) return true;
+    const result = this.datePickerService.dateFilter(d);
+    return !result.disabled;
+  };
+
   addTooltipsToDateCells(): void {
     console.log('addTooltipsToDateCells called');
     const buttons: NodeListOf<HTMLElement> = document.querySelectorAll(
@@ -94,12 +101,6 @@ export class DatePickerModalComponent
     });
   }
 
-  dateFilter = (d: Date | null): boolean => {
-    if (d === null) return true;
-    const result = this.datePickerService.dateFilter(d);
-    return !result.disabled;
-  };
-
   dateClass = (d: Date): string => {
     const result = this.datePickerService.dateFilter(d);
     return result.disabled
@@ -107,11 +108,6 @@ export class DatePickerModalComponent
       : result.notice
       ? 'restricted-date'
       : '';
-  };
-
-  tooltipText = (d: Date): string => {
-    const { notice } = this.datePickerService.dateFilter(d);
-    return notice || '';
   };
 
   onOk(): void {

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DatePickerService } from './date-picker.service';
-import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',

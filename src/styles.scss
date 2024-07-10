@@ -68,8 +68,8 @@ body {
   background-color: #f2f2f2;
 }
 
-.mat-calendar-body-cell-container .restricted-date span {
-  border-color: red !important;
+.restricted-date span {
+  border-color: red;
 }
 
 .mat-calendar-body-cell-container .mat-calendar-body-cell::after {

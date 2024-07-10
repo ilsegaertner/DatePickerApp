@@ -20,7 +20,6 @@ h2 {
 }
 
 .selected-date-div {
-  // background-color: #00d593;
   background: linear-gradient(to right, #00d593, white);
   flex: 1;
   height: 50px;
@@ -35,9 +34,7 @@ h2 {
 }
 
 .main-div {
-  // margin-top: 20px;
   margin: 20px auto;
-  // border: 0.2px solid black;
   display: flex;
   flex-direction: row;
   gap: 30px;
