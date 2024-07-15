@@ -4,8 +4,31 @@
     <h1>Frontend challenge <span>Iusta</span></h1>
     <h2>Optimized Datepicker</h2>
   </header>
-  <div class="main-div">
-    <button mat-button (click)="openDatePicker()">Open Datepicker</button>
-    <div class="selected-date-div">{{ selectedDate | date }}</div>
+  <div class="main-div-wrapper">
+    <div class="main-div">
+      <!-- <h4>Select A Deadline</h4> -->
+      <button mat-button (click)="openDatePicker()">Open Calendar</button>
+    </div>
+    <div class="selected-date-div" *ngIf="selectedDate">
+      <p style="font-weight: 100">Selected Date:</p>
+      <h4>{{ selectedDate | date }}</h4>
+      <!-- <button (click)="openDetailsSection()"></button> -->
+      <div class="details-section">
+        <textarea
+          placeholder="Enter Details..."
+          class="empty-div"
+          [(ngModel)]="enteredDetails"
+        >
+        </textarea>
+        <button mat-button (click)="saveEnteredDetails()">Save</button>
+        <div *ngIf="showDetails">
+          <p>Entered Details</p>
+          <p>{{ enteredDetails }}</p>
+        </div>
+        <button mat-button (click)="deleteEnteredDetails()">
+          Delete notes
+        </button>
+      </div>
+    </div>
   </div>
 </main>
