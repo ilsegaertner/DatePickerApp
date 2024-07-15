@@ -8,6 +8,8 @@ import { DatePickerService } from './date-picker.service';
 })
 export class AppComponent {
   selectedDate: Date | null = null;
+  enteredDetails: string = '';
+  showDetails: boolean = false;
 
   constructor(private datePickerService: DatePickerService) {}
 
@@ -20,5 +22,15 @@ export class AppComponent {
           this.selectedDate = result;
         }
       });
+  }
+
+  saveEnteredDetails(): void {
+    this.showDetails = true;
+    console.log('Details saved:', this.enteredDetails);
+  }
+
+  deleteEnteredDetails(): void {
+    this.showDetails = false;
+    this.enteredDetails = '';
   }
 }
