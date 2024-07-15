@@ -53,6 +53,7 @@ $DatePickerApp3-theme: mat.define-theme(
 * {
   box-sizing: border-box;
   font-family: "Neuzeit Grotesk", sans-serif;
+  // border: 1px solid red;
 }
 
 html,
@@ -66,6 +67,7 @@ body {
   padding: 20px;
   max-width: 66.6%;
   background-color: #f2f2f2;
+  font-size: 20px;
 }
 
 .restricted-date span {
