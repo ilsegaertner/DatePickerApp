@@ -1,27 +1,27 @@
-# DatePickerApp3
+# Optimized Datepicker in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## Introduction
 
-## Development server
+This project features an optimized datepicker component built with Angular. It includes functionalities such as tooltips for specific days, the ability to disable or restrict certain dates, and navigation through months while displaying adjacent weeks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Easy Date Selection**: Quick and intuitive date selection.
+- **Tooltips**: Custom tooltips for specific dates.
+- **Customizable Dates**: Define disabled and restricted dates.
+- **Month Navigation**: Navigate between months, displaying adjacent weeks.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. **Clone the repository:**
+   ```git clone https://github.com/yourusername/optimized-datepicker.git
+   cd optimized-datepicker
+   ```
+2. **Install dependencies:**
+   `npm install`
+3. **Run the development server:**
+   `ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Open your browser and navigate to http://localhost:4200.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Challenges
