@@ -13,7 +13,7 @@ This project features an optimized datepicker component built with Angular, crea
 
 ![Datepicker Screenshot](https://github.com/ilsegaertner/DatePickerApp/blob/final-no-details/src/assets/optimized-datepicker-snapshot.png?raw=true)
 
---> [Link to Optimized-Datepicker](https://optimized-datepicker.netlify.app/)
+--> You can view the application live at: <a href="https://optimized-datepicker.netlify.app/" target="_blank">https://optimized-datepicker.netlify.app/</a>
 
 ## Requirements
 
