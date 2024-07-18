@@ -25,22 +25,23 @@ A user wants to add a deadline. To select the due date for the deadline, the use
 
 1. **Clone the repository:**
 
-   ```git clone https://github.com/yourusername/optimized-datepicker.git
-   cd optimized-datepicker
-   ```
+   `git clone https://github.com/yourusername/optimized-datepicker.git`
+   `cd optimized-datepicker`
 
 2. **Install dependencies:**
-   ```
-    npm install
-    ```
+
+    `npm install`
 3. **Run the development server:**
-   ```
-ng serve
-```
+
+   `ng serve`
 
 Open your browser and navigate to http://localhost:4200.
 
 ## Challenges
+
+```
+
+```
 
 ```
 
