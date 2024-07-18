@@ -10,10 +10,18 @@
       <button mat-button (click)="openDatePicker()">Open Calendar</button>
     </div>
     <div class="selected-date-div" *ngIf="selectedDate">
-      <p style="font-weight: 100">Selected Date:</p>
+      <p style="font-weight: 100; margin-top: 20px">Selected Date:</p>
       <h4>{{ selectedDate | date }}</h4>
-      <!-- <button (click)="openDetailsSection()"></button> -->
-      <div class="details-section">
+      <!-- <button
+        mat-button
+        class="further-details-button"
+        *ngIf="selectedDate"
+        (click)="openDetailsSection()"
+      >
+        +
+      </button>
+      <button mat-button *ngIf="enteredDetails" (click)="closeDetailsSection()">-</button>
+      <div class="details-section" *ngIf="showDetailsSection">
         <textarea
           placeholder="Enter Details..."
           class="empty-div"
@@ -21,14 +29,18 @@
         >
         </textarea>
         <button mat-button (click)="saveEnteredDetails()">Save</button>
-        <div *ngIf="showDetails">
-          <p>Entered Details</p>
+        <div *ngIf="showDetails" class="details">
+          <p>Notes</p>
           <p>{{ enteredDetails }}</p>
         </div>
-        <button mat-button (click)="deleteEnteredDetails()">
+        <button
+          mat-button
+          (click)="deleteEnteredDetails()"
+          style="margin-bottom: 100px"
+        >
           Delete notes
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </main>
