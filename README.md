@@ -59,10 +59,32 @@ Open your browser and navigate to http://localhost:4200.
 **Resolution**:
 
 - **Research and Resources**:
-  - Extensively reviewed Angular Material documentation to identify potential optimizations.
+  - Research on Angular Material documentation to identify potential optimizations.
   - Utilized AI tools like ChatGPT for additional insights and solutions.
 - **Debugging and Testing**:
-  - Employed detailed console log statements to trace and resolve issues.
-  - Iteratively refactored and tested the code to enhance readability, maintainability, and performance.
+  - Employed console log statements to trace and resolve issues.
+  - Refactored and tested the code to enhance readability and maintainability.
 - **Outcome**:
-  - Successfully implemented a robust datepicker with dynamic tooltips, enhancing user experience and meeting all specified requirements.
+  - Successfully implemented a datepicker with dynamic tooltips, enhancing user experience.
+
+### Displaying Adjacent Weeks
+
+**Context**: Another requirement was to display the last week of the previous month and the first week of the next month in a different tone, while making these dates selectable.
+
+**Action**:
+
+- Initially attempted to implement this feature using custom JavaScript logic within the Angular Material framework.
+- Found that ngx-bootstrap provided a version that included this requirement out-of-the-box.
+
+**Justification for Sticking with Angular Material**:
+
+- **Consistency**: Using Angular Material ensures a uniform design language throughout the application. Introducing ngx-bootstrap would have led to inconsistencies in the UI/UX, as it follows different design principles.
+- **Integration**: Angular Material seamlessly integrates with Angular’s core features, making the application more maintainable and easier to develop. Switching to ngx-bootstrap would require significant refactoring, increasing the risk of introducing bugs and inconsistencies.
+- **Customization Capability**: Despite initial difficulties, Angular Material is highly customizable. With additional time and resources, it is possible to extend its functionalities to meet specific requirements, ensuring a high degree of control over the final design and behavior.
+- **Learning Curve**: Sticking with Angular Material leverages the existing knowledge and experience within the team, avoiding the learning curve associated with adopting a new library like ngx-bootstrap.
+
+**Conclusion**:
+
+- **Strategic Decision**: The choice to continue with Angular Material was strategic, focusing on long-term benefits such as maintainability, consistency, and deep integration with Angular’s ecosystem.
+- **Incremental Improvements**: Acknowledging the current limitations, the decision allows for incremental improvements and iterative enhancements without overhauling the entire codebase.
+- **Commitment to Quality**: This approach underscores a commitment to delivering a high-quality user experience, aligned with modern design principles and the project’s overall aesthetic.
