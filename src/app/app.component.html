@@ -12,35 +12,7 @@
     <div class="selected-date-div" *ngIf="selectedDate">
       <p style="font-weight: 100; margin-top: 20px">Selected Date:</p>
       <h4>{{ selectedDate | date }}</h4>
-      <!-- <button
-        mat-button
-        class="further-details-button"
-        *ngIf="selectedDate"
-        (click)="openDetailsSection()"
-      >
-        +
-      </button>
-      <button mat-button *ngIf="enteredDetails" (click)="closeDetailsSection()">-</button>
-      <div class="details-section" *ngIf="showDetailsSection">
-        <textarea
-          placeholder="Enter Details..."
-          class="empty-div"
-          [(ngModel)]="enteredDetails"
-        >
-        </textarea>
-        <button mat-button (click)="saveEnteredDetails()">Save</button>
-        <div *ngIf="showDetails" class="details">
-          <p>Notes</p>
-          <p>{{ enteredDetails }}</p>
-        </div>
-        <button
-          mat-button
-          (click)="deleteEnteredDetails()"
-          style="margin-bottom: 100px"
-        >
-          Delete notes
-        </button>
-      </div> -->
+ 
     </div>
   </div>
 </main>

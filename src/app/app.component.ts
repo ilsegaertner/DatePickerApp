@@ -21,28 +21,7 @@ export class AppComponent {
       .subscribe((result: Date | null) => {
         if (result) {
           this.selectedDate = result;
-          this.showDetailsSection = false;
-          this.showDetails = false;
-          this.enteredDetails = '';
         }
       });
-  }
-
-  openDetailsSection(): void {
-    this.showDetailsSection = true;
-  }
-
-  closeDetailsSection(): void {
-    this.showDetailsSection = false;
-  }
-
-  saveEnteredDetails(): void {
-    this.showDetails = true;
-    console.log('Details saved:', this.enteredDetails);
-  }
-
-  deleteEnteredDetails(): void {
-    this.showDetails = false;
-    this.enteredDetails = '';
   }
 }
