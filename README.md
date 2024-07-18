@@ -70,7 +70,7 @@ Implementing dynamic tooltips for specific dates required an innovative approach
 
 ### Displaying Adjacent Weeks
 
-**Context**: Another requirement was to display the last week of the previous month and the first week of the next month in a different tone, while making these dates selectable.
+Another requirement was to display the last week of the previous month and the first week of the next month in a different tone, while making these dates selectable.
 
 **Action**:
 
