@@ -59,6 +59,8 @@ Another requirement was to display the last week of the previous month and the f
 - Initially attempted to implement this feature using custom JavaScript logic within the Angular Material framework.
 - Found that ngx-bootstrap provided a version that included this requirement out-of-the-box.
 
+Customizing the Angular Material Datepicker to display the last week of the previous month and the first week of the next month in a different tone proved challenging. While a version was created that achieved this feature, it was complicated and not entirely suitable because it didn't display the last week of the previous month or the first week of the next month within the current month view correctly. Although these dates were colored differently, the solution was discarded as it did not meet the desired functionality.
+
 **Justification for Sticking with Angular Material**:
 
 - **Consistency**: Using Angular Material ensures a uniform design language throughout the application. Introducing ngx-bootstrap would have led to inconsistencies in the UI/UX, as it follows different design principles.
