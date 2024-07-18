@@ -10,6 +10,7 @@ export class AppComponent {
   selectedDate: Date | null = null;
   enteredDetails: string = '';
   showDetails: boolean = false;
+  showDetailsSection: boolean = false;
 
   constructor(private datePickerService: DatePickerService) {}
 
@@ -20,8 +21,19 @@ export class AppComponent {
       .subscribe((result: Date | null) => {
         if (result) {
           this.selectedDate = result;
+          this.showDetailsSection = false;
+          this.showDetails = false;
+          this.enteredDetails = '';
         }
       });
+  }
+
+  openDetailsSection(): void {
+    this.showDetailsSection = true;
+  }
+
+  closeDetailsSection(): void {
+    this.showDetailsSection = false;
   }
 
   saveEnteredDetails(): void {
