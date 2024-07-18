@@ -30,7 +30,6 @@ export class DatePickerModalComponent
     private cdr: ChangeDetectorRef
   ) {
     this.observer = new MutationObserver(() => {
-      console.log('Calendar view changed');
       setTimeout(() => {
         this.addTooltipsToDateCells();
         this.cdr.detectChanges(); // Ensure Angular change detection runs
@@ -40,16 +39,19 @@ export class DatePickerModalComponent
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit called');
+  setupDatePickerOpenStream(): void {
     this.datepicker.openedStream.subscribe(() => {
       console.log('Datepicker opened');
       setTimeout(() => {
         this.addTooltipsToDateCells();
         this.observeCalendarViewChanges();
-        this.cdr.detectChanges(); // Ensure Angular change detection runs
-      }, 100); // Small delay to ensure elements are rendered
+        this.cdr.detectChanges();
+      }, 100);
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.setupDatePickerOpenStream();
   }
 
   observeCalendarViewChanges(): void {
@@ -77,21 +79,17 @@ export class DatePickerModalComponent
   };
 
   addTooltipsToDateCells(): void {
-    console.log('addTooltipsToDateCells called');
     const buttons: NodeListOf<HTMLElement> = document.querySelectorAll(
       '.mat-calendar-body-cell'
     );
-    console.log('Number of buttons found:', buttons.length);
 
     buttons.forEach((button: HTMLElement) => {
       const ariaLabel = button.getAttribute('aria-label');
-      console.log('Button:', button, 'Aria Label:', ariaLabel);
       if (ariaLabel) {
         const date = new Date(ariaLabel);
         const tooltipText = this.tooltipText(date);
-        console.log('Tooltip Text:', tooltipText, 'Date:', date);
         if (tooltipText) {
-          this.tooltipService.addTooltip(button, tooltipText); // Assign to button directly
+          this.tooltipService.addTooltip(button, tooltipText);
         } else {
           this.tooltipService.removeTooltip(button);
         }
