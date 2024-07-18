@@ -117,9 +117,10 @@ body {
   display: none;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 700px) {
   body {
+    background-color: #00d593;
     max-width: 100%;
-    min-width: 100%;
   }
 }
+
