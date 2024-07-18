@@ -47,7 +47,7 @@ Open your browser and navigate to the respective localhost address, e.g. http://
 
 ### Tooltip Implementation and Customization
 
-**Context**: Implementing dynamic tooltips for specific dates required an innovative approach to meet the project requirements. Since Angular Material’s `matTooltip` could not be customized to handle conditional tooltips, a custom tooltip solution was developed using CSS.
+Implementing dynamic tooltips for specific dates required an innovative approach to meet the project requirements. Since Angular Material’s `matTooltip` could not be customized to handle conditional tooltips, a custom tooltip solution was developed using CSS.
 
 **Action**:
 
