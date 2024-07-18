@@ -7,7 +7,7 @@ This project features an optimized datepicker component built with Angular, crea
 ## Features
 
 - **Easy Date Selection**: Quick and intuitive date selection.
-- **Tooltips**: Display custom notices for disabled and restricted dates on hover.
+- **Tooltips**: Display custom notices for public holidays, disabled or restricted dates on hover.
 - **Customizable Dates**: Define specific days as disabled or restricted with custom tooltips.
 - **Month Navigation**: Navigate between months.
 
