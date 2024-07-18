@@ -13,6 +13,8 @@ This project features an optimized datepicker component built with Angular, crea
 
 ![Datepicker Screenshot](https://github.com/ilsegaertner/DatePickerApp/blob/final-no-details/src/assets/optimized-datepicker-snapshot.png?raw=true)
 
+--> [Link to Optimized-Datepicker](https://optimized-datepicker.netlify.app/)
+
 ## Requirements
 
 A user wants to add a deadline. To select the due date for the deadline, the user clicks on the due date field -> A datepicker opens.
@@ -45,7 +47,7 @@ Open your browser and navigate to the respective localhost address, e.g. http://
 
 ### Tooltip Implementation and Customization
 
-**Context**: Implementing dynamic tooltips for specific dates required an innovative approach to meet the project requirements effectively.
+**Context**: Implementing dynamic tooltips for specific dates required an innovative approach to meet the project requirements.
 
 **Action**:
 
