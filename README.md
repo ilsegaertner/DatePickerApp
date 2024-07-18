@@ -11,6 +11,8 @@ This project features an optimized datepicker component built with Angular, crea
 - **Customizable Dates**: Define specific days as disabled or restricted with custom tooltips.
 - **Month Navigation**: Navigate between months.
 
+![Datepicker Screenshot](https://github.com/ilsegaertner/DatePickerApp/blob/final-no-details/src/assets/optimized-datepicker-snapshot.png?raw=true)
+
 ## Requirements
 
 A user wants to add a deadline. To select the due date for the deadline, the user clicks on the due date field -> A datepicker opens.
