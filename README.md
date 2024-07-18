@@ -41,10 +41,26 @@ Open your browser and navigate to http://localhost:4200.
 
 ## Challenges
 
-```
+### Tooltip Implementation and Customization
 
-```
+**Context**: Implementing dynamic tooltips for specific dates required an innovative approach to meet the project requirements effectively.
 
-```
+**Action**:
 
-```
+- **Dynamic Aria-Labeling**: A key challenge was to dynamically set the aria-label based on the `dateFilter` function’s output. This was essential for displaying the appropriate tooltips via CSS.
+- **Custom Tooltip Creation**:
+  - Since Angular Material’s `matTooltip` could not be customized to handle conditional tooltips, a custom tooltip solution was developed using CSS.
+  - Employed `MutationObserver`, `MatDatepicker`, and `ViewChild` to ensure the calendar view updates dynamically reflected the correct tooltip information.
+- **CSS Overriding**:
+  - Overriding default Angular Material styles required precision in CSS selectors. Effective targeting was achieved with selectors such as `.mat-calendar-body-cell-container .mat-calendar-body-cell::after`.
+
+**Resolution**:
+
+- **Research and Resources**:
+  - Extensively reviewed Angular Material documentation to identify potential optimizations.
+  - Utilized AI tools like ChatGPT for additional insights and solutions.
+- **Debugging and Testing**:
+  - Employed detailed console log statements to trace and resolve issues.
+  - Iteratively refactored and tested the code to enhance readability, maintainability, and performance.
+- **Outcome**:
+  - Successfully implemented a robust datepicker with dynamic tooltips, enhancing user experience and meeting all specified requirements.
