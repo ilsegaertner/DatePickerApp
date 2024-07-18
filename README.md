@@ -25,24 +25,6 @@ A user wants to add a deadline. To select the due date for the deadline, the use
 
 `function dateFilter(date: Date): { disabled: boolean, notice?: string }`
 
-## Installation
-
-1. **Clone the repository:**
-
-   ```git clone https://github.com/yourusername/optimized-datepicker.git
-   cd optimized-datepicker
-   ```
-
-2. **Install dependencies:**
-
-   `npm install`
-
-3. **Run the development server:**
-
-   `ng serve`
-
-Open your browser and navigate to the respective localhost address, e.g. http://localhost:4200.
-
 ## Challenges
 
 ### Tooltip Implementation and Customization
