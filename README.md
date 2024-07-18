@@ -34,7 +34,9 @@ A user wants to add a deadline. To select the due date for the deadline, the use
     npm install
     ```
 3. **Run the development server:**
-   `ng serve`
+   ```
+ng serve
+```
 
 Open your browser and navigate to http://localhost:4200.
 
