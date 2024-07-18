@@ -39,7 +39,7 @@ A user wants to add a deadline. To select the due date for the deadline, the use
 
    `ng serve`
 
-Open your browser and navigate to http://localhost:4200.
+Open your browser and navigate to the respective localhost address, e.g. http://localhost:4200.
 
 ## Challenges
 
